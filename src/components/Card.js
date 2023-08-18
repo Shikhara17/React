@@ -9,3 +9,4 @@ function Card(props){
 export default Card;
 
 //composition component which serves as a shell to any component
+//Resolves code duplication as we extracted the css duplicated styling
