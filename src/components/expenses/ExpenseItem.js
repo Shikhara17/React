@@ -7,10 +7,13 @@ const ExpenseItem=(props)=>{
   // const expenseDate = new Date(2023, 8, 17);
   // const expenseTitle = "Car Insurance";
   // const expenseAmount = 6912;
+
+  //prop.title would be the initial state
   const [title,setTitle]=useState(props.title);
   
   const clickHandler=()=>{
     setTitle('updated');
+    //updating the state
   }
   return (
     <Card className="expense-item">

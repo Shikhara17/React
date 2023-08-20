@@ -1,4 +1,5 @@
 import Expense from "./components/expenses/Expense";
+import NewExpense from "./components/NewExpense/NewExpense";
 const App=() =>{
   const data = [
     {
@@ -23,7 +24,7 @@ const App=() =>{
   ];
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense/>
       {/* Syntax can be used as object destructring while calling and syntx 2 */}
       {/* <ExpenseItem expense={expenses[0]}></ExpenseItem> */}
       <Expense expenses={data}></Expense>
