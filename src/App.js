@@ -22,9 +22,12 @@ const App=() =>{
       date: new Date(2021, 5, 12)
     }
   ];
+  const addExceptionHandler=expenses=>{
+    console.log(expenses)
+  }
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAddExpense={addExceptionHandler}/>
       {/* Syntax can be used as object destructring while calling and syntx 2 */}
       {/* <ExpenseItem expense={expenses[0]}></ExpenseItem> */}
       <Expense expenses={data}></Expense>
