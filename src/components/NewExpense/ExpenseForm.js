@@ -21,24 +21,23 @@ const ExpenseForm = () => {
     date: "",
   });
   const titleChangeHandler = (event) => {
-    setUserInput({
-        ...userInput,
-        title:event.target.value
-    });
+    setUserInput((prevstate)=>{
+        return ({ ...prevstate, title:event.target.value})
+    })
   };
-
+//react schedules state updates and donot preform them instantly.
+//if there are enormous amounts of updates we might end up with an outdated
+//snapshot if we follow the previous approach..(check the commits)
   const amountChangeHandler = (event) => {
-    setUserInput({
-        ...userInput,
-        amount:event.target.value
-    });
+    setUserInput((prevstate)=>{
+        return ({ ...prevstate, amount:event.target.value})
+    })
   };
 
   const dateChangeHandler = (event) => {
-    setUserInput({
-        ...userInput,
-        date:event.target.value
-    });
+    setUserInput((prevstate)=>{
+        return ({ ...prevstate, date:event.target.value})
+    })
   };
 
   return (
